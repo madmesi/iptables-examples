@@ -32,7 +32,10 @@ network issue on nodes, could ping the gateway bu couln’t access to the intern
 0
 
 `echo 1 > /proc/sys/net/ipv4/ip_forward`
+
 but it’s not permanent:
+
 to make it permanent:
+
 `sysctl net.ipv4.ip_forward
 sysctl -w net.ipv4.ip_forward=1`
