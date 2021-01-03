@@ -1,9 +1,13 @@
 # iptables-examples
+
 making NAT rules in iptables:
+
 see all the rules:
+
 `iptables -t nat -v -L -n --line-number`
 
 ssh port forwarding:
+
 2020 is the new port that will forward the request to the 3022 of the destination host:
 `iptables -t nat -A PREROUTING -p tcp --dport 2020 -j DNAT --to-destination 172.16.20.20:3022`
 
