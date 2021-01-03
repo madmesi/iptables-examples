@@ -39,3 +39,8 @@ to make it permanent:
 
 `sysctl net.ipv4.ip_forward
 sysctl -w net.ipv4.ip_forward=1`
+
+
+Assuming you want to block aceess to specific port (8000) expect one ip addrees. The IP that you want to allow is 10.10.10.10
+`iptables -A INPUT -p tcp --dport 8000 -s 10.10.10.10 -j ACCEPT`
+`iptables -A INPUT -p tcp --dport 8000 -j DROP`
